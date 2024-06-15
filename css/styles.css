@@ -1,13 +1,15 @@
 /* styles.css */
 body {
   font-family: Arial, sans-serif;
+  background-color: rgb(48, 48, 48);
+  color: white;
 }
 
 .genero-container {
   margin: 20px;
   padding: 20px;
   border: 1px solid #ccc;
-  background-color: #f8f8f8;
+  background-color: #f8f8f82f;
 }
 
 h2 {
@@ -15,4 +17,16 @@ h2 {
   margin-bottom: 10px;
 }
 
+.genero{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 
+.peliculas{
+  width: 200px;
+}
+
+.peliculas img{
+  width: 200px;
+}
