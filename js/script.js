@@ -13,6 +13,15 @@ addFilmToHTML(actionHTML, actionList)
 addFilmToHTML(thrillerHTML, thrillerList)
 addFilmToHTML(adventureHTML, adventureList)
 
+function addFilmToList(a){
+    const arr = []
+    for (let i of peliculas){
+        if (i.genre_ids.find((element) => element == a)){
+            arr.push(i)
+        }
+    }
+    return arr
+}
 
 function addFilmToHTML (elementHTML, objectToAdd){
     for (let i of objectToAdd){
@@ -33,12 +42,3 @@ function addFilmToHTML (elementHTML, objectToAdd){
     console.log(elementHTML)
 }
 
-function addFilmToList(a){
-    const arr = []
-    for (let i of peliculas){
-        if (i.genre_ids.find((element) => element == a)){
-            arr.push(i)
-        }
-    }
-    return arr
-}
