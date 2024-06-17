@@ -4,16 +4,7 @@ const actionHTML = document.getElementById("genero-28");
 const thrillerHTML = document.getElementById("genero-53")
 const adventureHTML = document.getElementById("genero-12")
 
-const actionList = addFilmToList(28)
-const thrillerList = addFilmToList(53)
-const adventureList = addFilmToList(12)
-
-
-addFilmToHTML(actionHTML, actionList)
-addFilmToHTML(thrillerHTML, thrillerList)
-addFilmToHTML(adventureHTML, adventureList)
-
-function addFilmToList(a){
+const addFilmToList = (a) => {
     const arr = []
     for (let i of peliculas){
         if (i.genre_ids.find((element) => element == a)){
@@ -23,8 +14,12 @@ function addFilmToList(a){
     return arr
 }
 
-function addFilmToHTML (elementHTML, objectToAdd){
-    for (let i of objectToAdd){
+const actionList = addFilmToList(28)
+const thrillerList = addFilmToList(53)
+const adventureList = addFilmToList(12)
+
+const addFilmToHTML = (elementHTML, objectToAdd) => {
+for (let i of objectToAdd){
         const elementDIV = document.createElement("div")
         const elementIMG = document.createElement("img")
         //const elementP = document.createTextNode(i["original_title"])
@@ -41,4 +36,10 @@ function addFilmToHTML (elementHTML, objectToAdd){
     }
     console.log(elementHTML)
 }
+
+addFilmToHTML(actionHTML, actionList)
+addFilmToHTML(thrillerHTML, thrillerList)
+addFilmToHTML(adventureHTML, adventureList)
+
+
 
